@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#151a1d">
+<title>Wizard Bet — 100 Game Demo</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+<header class="top">
+  <div class="logo">wizard<span>Bet</span></div><button class="search">⌕</button>
+  <button class="wallet" id="walletBtn">◉ UGX <b id="balance">1000.00</b><i>+</i></button>
+</header>
+<nav class="topnav">
+  <button class="active" data-page="casino">♣<small>CASINO</small></button>
+  <button data-page="sports">⚽<small>SPORTS</small></button>
+  <button data-page="live">〽<small>LIVE</small></button>
+  <button data-page="virtuals">▣<small>VIRTUALS</small></button>
+</nav>
+
+<main>
+<section id="casino" class="page active">
+  <div class="purple"> <b>WIZARD BET</b><span>100 PLAYABLE DEMO GAMES</span></div>
+  <div class="chips" id="filters"></div>
+  <div class="section"><h2>☆ Favourites</h2><div id="favourites" class="favrow"></div></div>
+  <div class="section"><h2>🇺🇬 Most Popular in Uganda</h2><div id="games" class="grid"></div></div>
+</section>
+
+<section id="sports" class="page">
+ <div class="purple"><b>SPORTS</b><span>DEMO BETTING MARKETS</span></div>
+ <div class="sport"><h3>⚽ Demo Football</h3><p>Wizard FC <span>14:30</span><br>BetPawa United</p>
+  <div class="odds"><button data-bet="Wizard FC" data-odds="1.80">1 <b>1.80</b></button><button data-bet="Draw" data-odds="3.25">X <b>3.25</b></button><button data-bet="BetPawa United" data-odds="4.10">2 <b>4.10</b></button></div>
+ </div>
+ <div class="sport"><h3>🏀 Demo Basketball</h3><p>Kampala Stars <span>18:00</span><br>Jinja Giants</p>
+  <div class="odds"><button data-bet="Kampala Stars" data-odds="1.55">H <b>1.55</b></button><button data-bet="Jinja Giants" data-odds="2.45">A <b>2.45</b></button><button data-bet="Over 160.5" data-odds="1.90">O <b>1.90</b></button></div>
+ </div>
+</section>
+
+<section id="live" class="page">
+ <div class="purple"><b>LIVE / CRASH</b><span>VIRTUAL CREDITS ONLY</span></div>
+ <div class="crash"><div>🚀</div><strong id="mult">1.00x</strong><small id="crashStatus">Ready</small></div>
+ <div class="crashControls"><input id="crashStake" type="number" min=".1" step=".1" value="10"><button id="crashBtn">START</button></div>
+</section>
+
+<section id="virtuals" class="page">
+ <div class="purple"><b>VIRTUAL SPORTS</b><span>SIMULATED MATCHES</span></div>
+ <div class="sport"><h3>🏟️ Virtual Football</h3><p>Wizard FC vs Kampala City</p><div class="odds"><button data-bet="Wizard FC Virtual" data-odds="2.00">1 <b>2.00</b></button><button data-bet="Draw Virtual" data-odds="3.10">X <b>3.10</b></button><button data-bet="Kampala City Virtual" data-odds="2.70">2 <b>2.70</b></button></div></div>
+</section>
+</main>
+
+<nav class="bottom">
+ <button class="active" data-page="casino">♣<span>Casino</span></button>
+ <button data-page="sports">⚽<span>Sports</span></button>
+ <button data-page="bets">▤<span>Bets</span><em id="betCount"></em></button>
+ <button data-page="live">〽<span>My bets</span></button>
+ <button data-page="account">♙<span>Account</span></button>
+</nav>
+
+<section id="gameModal" class="modal" aria-hidden="true">
+ <div class="modalCard">
+  <button id="closeGame" class="close">×</button>
+  <div id="gameTitle"></div>
+  <div id="gameArea"></div>
+ </div>
+</section>
+
+<section id="walletModal" class="modal" aria-hidden="true">
+ <div class="modalCard"><button class="close" id="closeWallet">×</button><h2>Demo Wallet</h2><p>Add virtual credits. No real-money transactions.</p><div class="amounts"><button data-add="100">+100</button><button data-add="500">+500</button><button data-add="1000">+1000</button></div></div>
+</section>
+
+<section id="bets" class="page"><div class="purple"><b>BETSLIP</b><span>DEMO BETS</span></div><div class="panel" id="slip"></div><div class="panel"><h3>History</h3><div id="history">No bets yet.</div></div></section>
+<section id="account" class="page"><div class="purple"><b>ACCOUNT</b><span>DEMO PROFILE</span></div><div class="panel center"><div class="avatar">W</div><h2>Wizard Bet Demo</h2><p>Virtual balance</p><h2>UGX <span id="balance2">1000.00</span></h2><button class="primary" id="accountWallet">+ Add demo credits</button></div></section>
+
+<script src="app.js"></script>
+</body>
+</html>
